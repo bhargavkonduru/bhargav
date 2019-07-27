@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1>Java Script</h1>
+    <!--Java Script is a case sensitive-->
+<!--Functions Topic-->
+ <script>
+     function hello(){
+         document.write("please call the function");
+     }
+     hello();
+     </script>   
+     <input type="button" value="click" onclick="hello()">
+     <br>
+     <script>
+     function multiply(num){
+         return num*num*num;  //we can use return when the program is end stage,if you write return before the next line will not print//
+        
+     }
+     </script>
+     <script>
+         document.write(multiply(5));
+     </script>
+     <br>
+     <!--Functions  end-->
+     
+     <!--Variables in java script-->
+     
+        <script>
+       //local variable example//      //---variable are  2 types --1. local variable,2.global variable---//
+       function add(){
+           var y=50;
+           document.write("value of x is " + y);
+       }
+       add();
+      //this will not display becoz it is outside of function// document.write(y); //---local variable we can use with in the function only--//
+                                
+        </script>
+        <br>
+
+        <!--Global variable Examples--// Global Varible we can use anywhere in the program--//-->
+
+        <script>
+      var x=45;
+      function vky(){
+          document.write(x);
+      }
+      vky();
+      document.write(x);
+        </script>
+        <br>
+        
+     <!--Variable end-->
+
+     <!--Data Types In Java Script-->
+
+    <!--// 1. Number Data type-- 2.String data type--3.Boolean Data Type--4.Regular Expression--5.Array-->
+    <!--Number Data Type-->
+    <script>
+
+    var a=25;  // number data type//
+    document.write(typeof(a)); // -output : number--//
+    var b=23.3;
+    var name="Vicky";  //String data type //
+    document.write("Hello" + name);
+    document.write(typeof(name)); //--output : string--///
+    var vicky = true;  //Boolean Data Type //
+    document.write(vicky);
+    document.write(typeof(vicky)); //--output : boolean--//
+    
+    </script><br>
+    <!--Data Types End-->
+
+    <!--Operators In java Script-->
+    
+    <!--6 Types of operators we have in java script-->
+    <!--1.Arithematic Operators-->
+    <!--2.Assignment Operators-->
+    <!--3.Comparision/Relational Operators-->
+    <!--4.Bitwise Operators-->
+    <!--5.Logical Operators-->
+    <!--6.Special Operators-->
+
+
+    <!--If-Else Statement-->
+
+    <script>
+        var x=20;
+        if(x%2==0){
+            document.write("x is Even numeber");
+        }else{
+            document.write("x is a add number");
+        }
+        </script>
+        <br>
+
+        <!--loops in java script-->
+        <!--for loop-->
+        <!--while loop-->
+        <!--do-while loop-->
+
+    <!--For Loop-->
+    <script>
+    for(i=0;i<=5;i++){
+        document.write( "Hello Vicky"+"<br>");
+    }
+    </script><br>
+
+    <!--While Loop-->
+    <script>
+        var i=1;
+            while(i<=5){
+                document.write("Hello Vicky"+"<br>");
+                i++;
+            }
+            </script>
+
+            <!--Do-While loop--> 
+            <script>
+            var i=51; // The speciality of do while loop is if the statement is wrong also it will execute atleast one time...//
+            do{
+                document.write(i+"<br>");
+                i=i+2;
+            }while(i<=50);
+            </script>
+            <br>
+            
+            <!--Switch statement-->
+            <script>
+            var marks=30;
+            switch(true){
+                case marks>90 : result="A Grade";
+                break;
+                case marks>80 : result="B Grade";
+                breack;
+                case marks>60 : result="C Grade";
+                break;
+                case marks>40 : result="D Grade";
+                break;
+                case marks>36 : result="A Grade";
+                break;
+                default : result="Fail";
+            }
+            document.write(result);
+            </script>
+            <br>
+
+            <!--Arrays in Java Script-->
+            <!--Array is a single variable that is used to store different elements-->
+            <!--By Array Literal-->
+            <!--Array Directly(New Keyword)-->
+            <!--Array Constructor-->
+
+            <script>
+            var students=["vky","raju","chandu"];  //  By array Literal //
+            for(i=0;i<students.length;i++){
+                document.write(students[i]);
+            }
+            var i=0;
+            var stu=new Array();  // Array Directly(New Keyword) // 
+            stu[0]=12;
+            stu[1]=13;
+            stu[2]=14;
+            stu[3]=15;
+            stu[4]="vicky";
+            stu[5]="bhargav";
+            while(i<stu.length){
+                document.write(stu[i] + "<br>");
+                i++;
+            }
+            
+            //  Array Constructor  //
+            var emp=new Array("vicky","naveen","teja");
+            for(i=0;i<emp.length;i++){
+                document.write(emp[i] + "<br>");
+            }
+            </script>
+            <br>
+
+            <!--String in javascript-->
+            <script>
+            //--string methods--//
+          var str="abcdefghijklmnopqrstuvwxyz";
+          var len=str.length;
+          document.write(len);
+          document.write(str.indexOf('c'));  // it gives position of c like '2'--//
+          document.write(str.charAt(5));  //---it gives who places in 5 th position--//
+          //lastIndexOf()//
+          //search()//
+          //slice(2,4)// it will not takes 4 th word//
+          //substring(2,4)//it will takes 2-4 words//
+          //substr(7,6)// it will explains from 7 word and length of the word//
+          //replace("microsoft","nokia")//it will replaces nokia inplace of microsoft//
+          //toUpperCase()//it will gives capital letters//
+          //toLowerCase()//it will gives lower case letters//
+
+          
+            
+            </script>
+            <br>
+
+    <!--Objects In Java Script--> 
+    <!--Objective is a thing which contains properties and methods-->
+
+    <script>
+    // in objects we can store only sigle entity data   //
+    var stu1={"name":"Bhargav","rno":225,"branch":"EEE","address":"Satyavedu"};
+
+    console.log(Object.keys(stu1)); //This is the way how to find length of the object--//
+
+    document.write(stu1.name+" "+stu1.rno+" ");
+     
+    
+    </script>
+    <div class="">
+
+    </div>
+    <br>
+    <script>
+        // One More Model For Object  //
+    var emp1=new Object(0);
+    emp1.id=225;
+    emp1.name="bhargav";
+    emp1.salary=25000;
+    document.write(emp1.id  + " " + emp1.name+ " "+ emp1.salary);
+    </script>
+    <br>
+    <script>
+    //One more model for objects using functions //
+    function student(rno,name,address,branch){
+        this.rno=rno;
+        this.name=name;
+        this.address=address;
+        this.branch=branch;
+    }
+    var student1=new student(10,"vicky","rg puram","eee");
+    document.write(student1.rno +" "+student1.name);
+    
+    </script>
+    <script>
+    //--Browser object model-->
+    //--1.window object(alert,prompt,confirm,open,close,size,interval,timeout)-   2. History Object(back,forward)--
+       // 3.Naigator Object-- 4.Screen Oject--5.Location--6.Cookies>
+
+            //Window Object model ///
+
+           //alert("hello");//
+           //confirm("hello");//
+           //window.prompt("hello"); //
+           //var x=window.prompt("who are you?");
+           //document.write(x);
+           //open("http://www.google.com");
+           //var w=window.innerWidth;
+           //var w=window.innerHeight;
+           //setInterval
+           //setTimeout
+           
+           // History  Object Model  //
+           //back//
+           //forward//
+
+           // Navigator object model //
+           //navigator.appName/
+           //navigator.appVersion/
+           //navigator.appCodeName/
+           //naigator.cookieEnabled/
+           //naigator.userAgent/
+           //naigator.language/
+           //naigator.platform/
+           //naigator.product/
+
+           //Screen Object//
+            //screen.width//
+            //screen.height//
+            //screen.colorDepth//
+            //screen.pixelDepth//
+            </script>
+<script>
+
+            //!--Location in Java script-
+            
+           // document.write(location.href); // its for finding url//
+           //document.write(location.hostName);
+           //document.write(location.pathname);
+           //href=hostname+pathname//
+           //document.write(location.protocol);//
+           // document.write(location.assign("http://www.google.com"));-->
+           </script>
+           <script>
+    
+           // <!--Cookies-->
+           // <!--Cookies are data,stored in a small text files on your computer-->
+           // <!--When a user visits a web page ,his name can be stored in a cookie-->
+           // <!--Next Time the user visits the page,the cookie remember his name-->
+
+           // <!--DOM(Document object model-->
+           // <!--with the help of DOM we can add dynamic content to our webpage.update the content,structure and style.-->
+            //<!--3 Methods- 
+              //  1.write()
+               // 2.getElementById()
+              // <!-- 3.getElementByName()->
+              
+              //--Exmaple Of getElementById--//
+              function cube(){
+                  var num=document.getElementById("number").value;
+                  alert("The cube is " +num*num*num);
+              }
+
+               </script>
+               <form>
+                   Enter Num:<input type="text" id="number">
+                   <br><br>
+                   <input type="button" value="Find Cube" onclick="cube()">
+               </form>
+
+               <script>
+               //--Example of getElementByIdName--//
+
+               function printValue(){
+                   var name=document.form1.urname.value;
+                   alert("My Name Is " + name);
+               }
+
+               </script>
+               <form name="form1">
+                   Enter name : <input type="text" name="urname">
+                   <br>
+                   <input type="button" value="Print" onclick="printValue()">
+               </form>
+               
+
+
+               <p id="p1">Hello vicky</p>
+               <h3 id="p2">How are you vicky</h3>
+               <image src="C:\Users\bhara\Desktop\chandu.k\photo-1486989813814-da4a10a6fc7d.jpg" id="myimg">
+                   <p id="p3">Hello Bhargav raju vicky garu wellcome to our world</p>
+               <script>
+               //Changing HTML element : 3types
+               //1.Changing Content
+               //2.Changing Value
+               //3.Changing Style
+               document.getElementById("p1").innerHTML="Hello Bhargav";
+               document.getElementById("p2").innerHTML="How are you Bhargav";
+                document.getElementById("myimg").src="vicky.jpg";
+                document.getElementById("p3").style.color="red";
+               </script>
+               
+
+               <script>
+               
+               //--Cookies--//
+               //there are six parts of a cookies
+               //1.Name -Required
+               //2.Value-Required
+               //3.Expires-Optional
+               //4.Path-Optional
+               //5.Domain-Optional
+               //6.Security-Optional
+
+               //Creating cookie:
+
+              // document.cookie="username=vicky";
+              // document.cookie="username=bhargav";
+               //expires="Wed,20 Apr 2020 12:00:00 IST";
+               
+               //Reading cookie:
+               //var x=document.cookie;
+
+               //setCookie();
+               //getCookie();
+
+               
+               </script>
+
+               <script>
+               
+               //Events in java script
+               /*
+               1.onclick
+               2.ondblclick
+               3.onmouseover
+               4.onmouseout
+               5.onfocus
+               6.onblur
+               7.onchange
+               8.onload 
+               9.onsubmit
+               10.onreset
+               */
+
+               </script>
+
+
+               <script>
+
+                   //----- Ajax (Asynchronous javascript xml)---//
+
+                    //--"The Process of sending and receiving the data on the fly without page reload is called AJAX"--//
+                   //it is technique to send and receive the data asynchronously--//
+                   //now a days we are using JSON format to send data-//
+
+                   //--JSON--//
+                   //--JSON Is a format to send and receive the data--//
+                    //--Combination of Objects and Arrays--//
+                    //--Example Of JSON--//
+                    //
+                    var thePets=[
+                        {"name" : "dog","food":"nonveg","color":"white"},
+                        {"name" : "cat","food":"milk","color" : "black"},
+                        {"name" : "rabbit", "food":"carrots","color":"red"},
+                        {"name" : "puppy","food":"rice","color":"violet"}
+                    ]
+                    document.write(thePets[1].food+"<br>");
+                    document.write(thePets[0].food+"<br>");
+                    document.write(thePets[2].food+"<br>");
+                    document.write(thePets[3].food+"<br>");
+
+               </script>
+
+                
+            
+                
+            
+           
+
+
+</body>
+</html>
